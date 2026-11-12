@@ -1,0 +1,28 @@
+/* utilities.css: floating WhatsApp button and scroll reveal */
+
+.whatsapp-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; color: white; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: var(--transition);
+      animation: fabPulse 2s infinite;
+    }
+
+.whatsapp-fab:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+
+.whatsapp-fab svg { width: 30px; height: 30px; }
+
+@keyframes fabPulse {
+      0% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.1); }
+      100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    }
+
+.reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+.reveal.visible { opacity: 1; transform: translateY(0); }

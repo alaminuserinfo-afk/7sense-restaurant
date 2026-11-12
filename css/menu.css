@@ -1,0 +1,142 @@
+/* menu.css: menu tabs, menu items, badges, combo card */
+
+.menu-section { background: white; }
+
+.menu-tabs {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+      margin-bottom: 48px;
+    }
+
+.menu-tab {
+      padding: 10px 22px; border: 1.5px solid var(--gray-200);
+      border-radius: 50px; background: white; cursor: pointer;
+      font-size: 13px; font-weight: 600; color: var(--gray-500);
+      transition: var(--transition); font-family: "Inter", sans-serif;
+    }
+
+.menu-tab:hover { border-color: var(--teal-300); color: var(--teal-600); }
+
+.menu-tab.active {
+      background: var(--teal-600); color: white;
+      border-color: var(--teal-600); box-shadow: 0 4px 15px rgba(13,148,136,0.3);
+    }
+
+.menu-category { display: none; animation: fadeIn 0.4s ease; }
+
+.menu-category.active { display: block; }
+
+.menu-category-title {
+      font-size: 28px; color: var(--gray-900); margin-bottom: 8px;
+      padding-bottom: 16px; border-bottom: 2px solid var(--teal-100);
+    }
+
+.menu-category-desc {
+      font-size: 14px; color: var(--gray-400); margin-bottom: 28px;
+    }
+
+.menu-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px;
+    }
+
+.menu-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      background: var(--gray-50); border-radius: var(--radius);
+      transition: var(--transition);
+      border: 1px solid transparent;
+      gap: 14px;
+    }
+
+.menu-item:hover {
+      background: white; border-color: var(--teal-100);
+      box-shadow: var(--shadow); transform: translateY(-2px);
+    }
+
+.menu-item-img {
+      width: 68px; height: 68px; border-radius: 12px;
+      object-fit: cover; flex-shrink: 0;
+      background: var(--gray-200);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: var(--transition);
+    }
+
+.menu-item:hover .menu-item-img {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    }
+
+.menu-item-info { flex: 1; }
+
+.menu-item-name {
+      font-weight: 600; font-size: 15px; color: var(--gray-800); margin-bottom: 3px;
+    }
+
+.menu-item-desc {
+      font-size: 12px; color: var(--gray-400); line-height: 1.5;
+    }
+
+.menu-item-price {
+      font-family: "Playfair Display", serif; font-weight: 700;
+      font-size: 18px; color: var(--teal-600); white-space: nowrap; margin-left: 16px;
+    }
+
+.menu-item-badge {
+      display: inline-block; font-size: 10px; font-weight: 700;
+      padding: 2px 8px; border-radius: 50px; margin-left: 8px;
+      vertical-align: middle;
+    }
+
+.badge-new { background: #fef3c7; color: #d97706; }
+
+.badge-special { background: #ede9fe; color: #7c3aed; }
+
+.badge-best { background: #dcfce7; color: #16a34a; }
+
+.badge-hot { background: #fee2e2; color: #dc2626; }
+
+.pizza-prices {
+      display: flex; gap: 8px; margin-left: 16px; align-items: center;
+    }
+
+.pizza-price-item {
+      text-align: center;
+    }
+
+.pizza-price-item .size {
+      font-size: 10px; font-weight: 600; color: var(--gray-400);
+      display: block; margin-bottom: 2px;
+    }
+
+.pizza-price-item .price {
+      font-family: "Playfair Display", serif; font-weight: 700;
+      font-size: 14px; color: var(--teal-600);
+    }
+
+.combo-card {
+      background: linear-gradient(135deg, var(--teal-600), var(--teal-800));
+      border-radius: var(--radius-lg); padding: 32px; color: white;
+      margin-top: 32px; position: relative; overflow: hidden;
+    }
+
+.combo-card::before {
+      content: ""; position: absolute; top: -50px; right: -50px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+
+.combo-card h4 { font-size: 24px; margin-bottom: 8px; }
+
+.combo-card p { opacity: 0.85; font-size: 14px; margin-bottom: 16px; }
+
+.combo-card .combo-price {
+      font-family: "Playfair Display", serif; font-size: 36px; font-weight: 700;
+    }
+
+.combo-card .combo-price small { font-size: 14px; opacity: 0.7; font-family: "Inter", sans-serif; }
+
+@media (max-width: 768px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .menu-tabs { gap: 6px; }
+  .menu-tab { padding: 8px 14px; font-size: 12px; }
+  .menu-item-img { width: 56px; height: 56px; border-radius: 10px; }
+}

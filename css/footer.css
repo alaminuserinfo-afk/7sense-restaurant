@@ -1,0 +1,67 @@
+/* footer.css: footer */
+
+.footer-logo { width: 64px; height: 64px; border-radius: 50%; margin-bottom: 16px; display: block; }
+
+.footer {
+      background: var(--gray-900); color: rgba(255,255,255,0.7); padding: 60px 24px 28px;
+    }
+
+.footer-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    }
+
+.footer-brand h3 {
+      font-size: 24px; color: white; margin-bottom: 12px;
+    }
+
+.footer-brand h3 span { color: var(--teal-400); }
+
+.footer-brand p { font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+
+.footer-socials { display: flex; gap: 10px; }
+
+.footer-socials a {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); text-decoration: none; font-size: 16px;
+      transition: var(--transition);
+    }
+
+.footer-socials a:hover { background: var(--teal-600); color: white; }
+
+.footer-col h4 {
+      font-size: 14px; font-weight: 700; color: white;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 20px; font-family: "Inter", sans-serif;
+    }
+
+.footer-col ul { list-style: none; }
+
+.footer-col li { margin-bottom: 10px; }
+
+.footer-col a {
+      color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px;
+      transition: var(--transition);
+    }
+
+.footer-col a:hover { color: var(--teal-400); }
+
+.footer-bottom {
+      max-width: 1280px; margin: 40px auto 0; padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 13px;
+    }
+
+@media (max-width: 1024px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+.footer { background: var(--teal-900); }

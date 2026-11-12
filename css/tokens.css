@@ -1,0 +1,38 @@
+/* tokens.css: colors, radius, shadows (CSS variables) */
+
+:root {
+      --teal-50: #f0fdfa;
+      --teal-100: #ccfbf1;
+      --teal-200: #99f6e4;
+      --teal-300: #5eead4;
+      --teal-400: #2dd4bf;
+      --teal-500: #14b8a6;
+      --teal-600: #0d9488;
+      --teal-700: #0f766e;
+      --teal-800: #115e59;
+      --teal-900: #134e4a;
+      --amber-400: #fbbf24;
+      --amber-500: #f59e0b;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.05);
+      --shadow-xl: 0 25px 50px -12px rgba(0,0,0,0.15);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+:root { --teal-50:#EAF3F2; --teal-100:#D3E7E5; --teal-200:#B5D8D4; --teal-300:#8CC6C0; --teal-400:#63ADA7; --teal-500:#0F7274; --teal-600:#0A6667; --teal-700:#075253; --teal-800:#063F40; --teal-900:#042D2E;
+      --amber-400:#E0B26A; --amber-500:#C8934F; --gray-50:#F8F4EB; --gray-100:#F1EBDD; --gray-200:#E3DACA; --gray-300:#D2C7B3; --gray-500:#667573; --gray-600:#4A5A58; --gray-700:#334342; --gray-800:#1E2F2E; --gray-900:#0E1B1B; }

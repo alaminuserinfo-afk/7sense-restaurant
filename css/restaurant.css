@@ -1,0 +1,9 @@
+/* restaurant.css: the "A table among the green" band */
+
+.ambience { padding: 150px 24px; text-align: center; color: #fff; background: linear-gradient(rgba(4,45,46,.72), rgba(4,45,46,.82)), url('../images/band.jpg') center/cover no-repeat; }
+
+.ambience h2 { font-size: clamp(28px,4.2vw,50px); color: #fff; max-width: 22ch; margin: 0 auto 32px; }
+
+@media (max-width: 900px) {
+  .ambience { padding: 100px 20px; }
+}

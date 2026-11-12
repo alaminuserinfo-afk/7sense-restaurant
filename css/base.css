@@ -1,0 +1,89 @@
+/* base.css: reset, page defaults, buttons, section titles, shared animations */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+      font-family: "Inter", -apple-system, sans-serif;
+      color: var(--gray-800);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+h1, h2, h3, h4 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; }
+
+::-webkit-scrollbar { width: 8px; }
+
+::-webkit-scrollbar-track { background: var(--gray-100); }
+
+::-webkit-scrollbar-thumb { background: var(--teal-400); border-radius: 10px; }
+
+.btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px; border-radius: 50px; font-size: 15px;
+      font-weight: 600; text-decoration: none; cursor: pointer;
+      border: none; transition: var(--transition);
+    }
+
+.btn-primary {
+      background: var(--teal-600); color: white;
+      box-shadow: 0 4px 20px rgba(13,148,136,0.35);
+    }
+
+.btn-primary:hover { background: var(--teal-700); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(13,148,136,0.4); }
+
+.btn-outline {
+      background: rgba(255,255,255,0.1); color: white;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+.btn-outline:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+@keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+@keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+.section { padding: 100px 24px; }
+
+.section-inner { max-width: 1280px; margin: 0 auto; }
+
+.section-header { text-align: center; margin-bottom: 60px; }
+
+.section-label {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--teal-600); margin-bottom: 12px;
+    }
+
+.section-title {
+      font-size: clamp(30px, 4vw, 48px); color: var(--gray-900); margin-bottom: 16px;
+    }
+
+.section-desc {
+      font-size: 17px; color: var(--gray-500); max-width: 600px;
+      margin: 0 auto; line-height: 1.7;
+    }
+
+@keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+@media (max-width: 768px) {
+  .section { padding: 60px 16px; }
+}
+
+@media (max-width: 420px) {
+  .btn { width: 100%; justify-content: center; }
+}
+
+body { background: var(--gray-50); }
